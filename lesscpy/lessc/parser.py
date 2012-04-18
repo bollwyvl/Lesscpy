@@ -773,5 +773,5 @@ class LessParser(object):
 #        print(e.trace())
         if self.verbose:
             color = '\x1b[31m' if t == 'E' else '\x1b[33m'
-            print("%s%s: line: %d: %s\n" % (color, t, line, e), end='\x1b[0m')
+            print("%s%s: line: %d: %s\n%s" % (color, t, line, e,'\x1b[0m'))
             

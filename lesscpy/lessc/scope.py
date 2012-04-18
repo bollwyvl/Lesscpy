@@ -1,3 +1,4 @@
+# -*- coding: utf8 -*-
 """
 .. module:: lesscpy.lessc.scope
     :synopsis: Scope class.
@@ -17,7 +18,7 @@ class Scope(list):
         Args:
             init (bool): Initiate scope
         """
-        super().__init__()
+        super(Scope, self).__init__()
         self._mixins = {}
         if init: self.push()
         self.deferred = False
