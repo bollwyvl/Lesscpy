@@ -1,7 +1,6 @@
-*
-* LESSCPY *
-*
-python LessCss Compiler.
+# LESSCPY #
+*python LessCss Compiler.*
+
 v0.9a
 
 A compiler written in python for the lesscss language. 
@@ -15,12 +14,14 @@ to build in proper syntax checking and perhaps YUI compressing.
 This is an early version, so you are likly to find bugs.
 
 For more information on lesscss:
+
  * http://lesscss.org/
  * https://github.com/cloudhead/less.js
  
 Development files
- * https://github.com/robotis/Lesscpy (Mainline, py3+)
- * https://github.com/bollwyvl/Lesscpy (Python 2.7 fork)
+
+ * https://github.com/robotis/Lesscpy (mainline, py3+)
+ * https://github.com/bollwyvl/Lesscpy (python 2.7 fork)
  
 Requirements
 ============
@@ -34,52 +35,54 @@ For more information on ply:
 Installation
 ============
 
-pip install -e git://github.com/bollwyvl/Lesscpy.git#egg=Lesscpy
- or
-pip install setup.py
+    pip install -e git://github.com/bollwyvl/Lesscpy.git#egg=Lesscpy
+or
+
+    pip install setup.py
  
 or simply place the package into your python path.
 
 Compiler script Usage
 =====================
- 
-usage: lesscpy [-h] [-I INCLUDE] [-v] [-x] [-X] [-t] [-s SPACES] [-o OUT] [-r]
-               [-f] [-m] [-D] [-S] [-V] [-L] [-N]
-               target
 
-LessCss Compiler
+    usage: lesscpy [-h] [-I INCLUDE] [-v] [-x] [-X] [-t] [-s SPACES] [-o OUT] [-r]
+                   [-f] [-m] [-D] [-S] [-V] [-L] [-N]
+                   target
 
-positional arguments:
-  target                less file or directory
+    LessCss Compiler
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -I INCLUDE, --include INCLUDE
-                        Included less-files (comma separated)
-  -v, --verbose         Verbose mode
+    positional arguments:
+      target                less file or directory
 
-Formatting options:
-  -x, --minify          Minify output
-  -X, --xminify         Minify output, no end of block newlines
-  -t, --tabs            Use tabs
-  -s SPACES, --spaces SPACES
-                        Number of startline spaces (default 2)
+    optional arguments:
+      -h, --help            show this help message and exit
+      -I INCLUDE, --include INCLUDE
+                            Included less-files (comma separated)
+      -v, --verbose         Verbose mode
 
-Directory options:
-  Compiles all *.less files in directory that have a newer timestamp than
-  it's css file.
+    Formatting options:
+      -x, --minify          Minify output
+      -X, --xminify         Minify output, no end of block newlines
+      -t, --tabs            Use tabs
+      -s SPACES, --spaces SPACES
+                            Number of startline spaces (default 2)
 
-  -o OUT, --out OUT     Output directory
-  -r, --recurse         Recursive into subdirectorys
-  -f, --force           Force recompile on all files
-  -m, --min-ending      Add '.min' into output filename. eg, name.min.css
-  -D, --dry-run         Dry run, do not write files
+    Directory options:
+      Compiles all *.less files in directory that have a newer timestamp than
+      it's css file.
 
-Debugging:
-  -S, --scopemap        Scopemap
-  -V, --debug           Debug mode
-  -L, --lex-only        Run lexer on target
-  -N, --no-css          No css output
+      -o OUT, --out OUT     Output directory
+      -r, --recurse         Recursive into subdirectorys
+      -f, --force           Force recompile on all files
+      -m, --min-ending      Add '.min' into output filename. eg, name.min.css
+      -D, --dry-run         Dry run, do not write files
+
+    Debugging:
+      -S, --scopemap        Scopemap
+      -V, --debug           Debug mode
+      -L, --lex-only        Run lexer on target
+      -N, --no-css          No css output
+
 
 Supported features
 ==================
@@ -97,32 +100,31 @@ Supported features
 * Expressions
 * Keyframe blocks
 * Color functions:
-** lighten
-** darken
-** saturate
-** desaturate
-** spin
-** hue
-** mix
-** saturation
-** lightness
+  * lighten
+  * darken
+  * saturate
+  * desaturate
+  * spin
+  * hue
+  * mix
+  * saturation
+  * lightness
 * Other functions:
-** round
-** increment
-** decrement
-** format '%('
-** add
-** iscolor
-** isnumber
-** isurl
-** isstring
-** iskeyword
-* Keyframe blocks
+  * round
+  * increment
+  * decrement
+  * format '%('
+  * add
+  * iscolor
+  * isnumber
+  * isurl
+  * isstring
+  * iskeyword
 
 Differences from lessc.js
 =========================
 * All MS filters and other strange vendor constructs must be escaped
-* All colors are auto-formatted to #nnnnnn. eg, #f7e923
+* All colors are auto-formatted to `#nnnnnn`. eg, `#f7e923`
 * Does not preserve css comments
 
 Not supported (yet)
