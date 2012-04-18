@@ -4,10 +4,10 @@
 python LessCss Compiler.
 v0.9a
 
-A compiler written in python 3 for the lesscss language. 
+A compiler written in python for the lesscss language. 
 For those of us not willing/able to have node.js installed in our environment. 
 Not all features of lesscss are supported (yet).
-Some features wil probably never be supported (JavaScript evaluation). 
+Some features will probably never be supported (JavaScript evaluation). 
 This program uses PLY (Python Lex-Yacc) to tokenize/parse the input and is 
 considerably slower than the nodejs compiler. The plan is to utilize this 
 to build in proper syntax checking and perhaps YUI compressing.
@@ -19,13 +19,14 @@ For more information on lesscss:
  * https://github.com/cloudhead/less.js
  
 Development files
- * https://github.com/robotis/Lesscpy
+ * https://github.com/robotis/Lesscpy (Mainline, py3+)
+ * https://github.com/bollwyvl/Lesscpy (Python 2.7 fork)
  
 Requirements
 ============
 
-* python 3+
-* ply (Python Lex-Yacc) python 3 version
+* python 2.7+
+* ply (Python Lex-Yacc) 
 
 For more information on ply:
 * http://www.dabeaz.com/ply/
@@ -33,7 +34,9 @@ For more information on ply:
 Installation
 ============
 
-python3 setup.py install
+pip install -e git://github.com/bollwyvl/Lesscpy.git#egg=Lesscpy
+ or
+pip install setup.py
  
 or simply place the package into your python path.
 
